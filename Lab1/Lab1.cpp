@@ -7,7 +7,7 @@ using namespace std;
 int** matrix;
 int n, m;
 
-DWORD WINAPI Thread1(void* pParams) 
+DWORD WINAPI Thread(void* pParams) 
 {
 	int result = 0;
 
@@ -27,8 +27,6 @@ DWORD WINAPI Thread1(void* pParams)
 	return 0;
 }
 
-class ThreadEnvironment {
-public:
 	void StartUp() 
 	{
 		while (true)
@@ -54,19 +52,16 @@ public:
 					}
 				}
 
-				HANDLE hThread1 = CreateThread(NULL, 0, Thread1, NULL, 0, NULL);
+				HANDLE hThread1 = CreateThread(NULL, 0, Thread, NULL, 0, NULL);
 				WaitForSingleObject(hThread1, INFINITE);
 				CloseHandle(hThread1);		
 
 		}
 	}
-};
+
 
 int main()
 {
 	setlocale(LC_ALL, "Ru");
-
-	ThreadEnvironment threadEnvironment;
-
-	threadEnvironment.StartUp();
+	StartUp();
 }
