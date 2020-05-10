@@ -24,8 +24,8 @@ public:
 	}
 };
 
-Clients Simple(20);
-Clients Special(5);
+Clients Simple(3);
+Clients Special(2);
 
 HANDLE BarberEvent; // Событие: парикмахер свободен
 
@@ -105,6 +105,10 @@ DWORD WINAPI Barber(PVOID Parametr)
 int main()
 {
 	setlocale(LC_ALL, "Ru");
+
+	cout << "Обычных мест: " << Simple.Max << endl;
+	cout << "VIP мест: " << Special.Max << endl;
+
 	cout << "Барбер спит" << endl;
 
 	BarberEvent = CreateWaitableTimer(NULL, TRUE, NULL);
