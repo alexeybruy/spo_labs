@@ -13,7 +13,6 @@ bool isThreadFree = true;
 
 DWORD WINAPI Thread(void* pParams)
 {
-
 	int result = 0;
 
 	for (int i = 0; i < n; i++)
