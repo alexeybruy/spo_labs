@@ -78,11 +78,11 @@ void StartUp()
 			}
 		}
 
-		cout << endl << "Высокий приоритет: " << endl;
-		RunThreadWithPriority(THREAD_PRIORITY_ABOVE_NORMAL);
-
 		cout << endl << "Низкий приоритет: " << endl;
 		RunThreadWithPriority(THREAD_PRIORITY_LOWEST);
+
+		cout << endl << "Высокий приоритет: " << endl;
+		RunThreadWithPriority(THREAD_PRIORITY_ABOVE_NORMAL);
 	}
 }
 
