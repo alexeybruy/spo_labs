@@ -124,6 +124,8 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 	case WM_LBUTTONUP:
 		//mouseDown = false;
 		break;
+	case WM_CLOSE:
+		break;
 	default:
 		return DefWindowProc(hWnd, message, wParam, lParam);
 	}
