@@ -21,6 +21,7 @@ namespace Curs {
 			//
 			//TODO: Add the constructor code here
 			//
+			RefreshColorPanel();
 		}
 
 	protected:
@@ -46,9 +47,9 @@ namespace Curs {
 
 	private: int changeColorStep = 20;
 
-	private: int redColorComponent = 100;
-	private: int greenColorComponent = 100;
-	private: int blueColorComponent = 100;
+	private: int redColorComponent = 240;
+	private: int greenColorComponent = 200;
+	private: int blueColorComponent = 60;
 
 	private:
 		/// <summary>
